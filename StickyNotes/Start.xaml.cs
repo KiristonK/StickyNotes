@@ -147,9 +147,11 @@ namespace StickyNotes
 
         private void Start_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.ClickCount == 1)
+            if (e.ClickCount == 2)
             {
-
+                MainWindow window = new MainWindow();
+                this.Close();
+                window.Show();
             }
         }
     }

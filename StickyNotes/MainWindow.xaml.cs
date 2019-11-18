@@ -8,17 +8,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace StickyNotes
 {
     /// <summary>
-    /// Interaction logic for MainLook.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainLook : Page
+    public partial class MainWindow : Window
     {
-        public MainLook()
+        public MainWindow()
         {
             InitializeComponent();
         }
