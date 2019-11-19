@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" AllowsTransparency="True" WindowStyle="None"
         Top="-35" MouseEnter="Start_OnMouseEnter" MouseLeave="Start_OnMouseLeave"
-        MouseDown="Start_OnMouseDown" MouseUp="Start_OnMouseUp" MouseMove="Start_OnMouseMove" MouseLeftButtonDown="Start_OnMouseLeftButtonDown">
+        MouseDown="Start_OnMouseDown" MouseUp="Start_OnMouseUp" MouseMove="Start_OnMouseMove" MouseDoubleClick="Start_OnMouseLeftButtonDown">
     <Window.Background>
         <ImageBrush x:Name="BG" ImageSource="D:\My_Projects\StickyNotes\StickyNotes\resources\GradientCircle1.png"></ImageBrush>
     </Window.Background>

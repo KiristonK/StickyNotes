@@ -8,8 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="179*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="194*"/>
             <RowDefinition Height="109*"/>
             <RowDefinition Height="109*"/>
         </Grid.RowDefinitions>
@@ -20,11 +20,30 @@
             <ColumnDefinition Width="267*"/>
         </Grid.ColumnDefinitions>
 
-        <Menu Grid.Row="0" Grid.ColumnSpan="3" Margin="0,0,0,10">
-            <MenuItem Header="File" FontSize="17" Margin="10,2,2,2">
+        <Menu Grid.ColumnSpan="3" VerticalAlignment="Center" Height="22">
+            <MenuItem Header="File" FontSize="12" Margin="10,2,2,2" VerticalAlignment="Center">
                 <MenuItem Header="New"/>
-                <MenuItem Header="Open/"></MenuItem>
+                <MenuItem Header="Open"></MenuItem>
             </MenuItem>
         </Menu>
+        <Menu x:Name="NoteMenu" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Background="Azure">
+            <MenuItem  Margin="10,10,10,10" Height="30" Width="160" BorderBrush="Black" RenderTransformOrigin="0.5,0.5" MouseDoubleClick="UIElement_OnMouseDoubleClick">
+                <MenuItem.Header>
+                    <TextBox x:Name="NoteBlock" Margin="-6" Text="My Note" BorderThickness="0" IsReadOnly="True" Focusable="False"
+                             KeyDown="NoteBlock_OnKeyDown"
+                             TextAlignment="Center" FontSize="17" Width="158" Height="28" RenderTransformOrigin="0.5,0.5" Background="Transparent" LostFocus="NoteBlock_OnLostFocus">
+                    </TextBox>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Margin="10,0" Height="30" Width="160" BorderBrush="Black" Click="MenuItem_OnClick">
+                <MenuItem.Header>
+                    <TextBlock x:Name="AddNoteBlock" Margin="-6" Text="+" TextAlignment="Center" FontSize="17" Width="159" Height="29"/>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Margin="10" Width="160" Height="30" BorderThickness="1" BorderBrush="Black"></MenuItem>
+        </Menu>
+        <TextBox x:Name="NoteBox" Grid.Column="1" Margin="10,10,10,10" Grid.Row="1" Text="New note :)" FontSize="15" AcceptsReturn="True"
+                 BorderBrush="Aqua" BorderThickness="3"
+                   TextWrapping="Wrap" Grid.ColumnSpan="2" Grid.RowSpan="3" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top"/>
     </Grid>
 </Window>

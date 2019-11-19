@@ -76,7 +76,6 @@ namespace StickyNotes
                 cnt++;
             }
             LocPos();
-            
         }
 
         private void Start_OnMouseDown(object sender, MouseButtonEventArgs e)
@@ -147,12 +146,9 @@ namespace StickyNotes
 
         private void Start_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.ClickCount == 2)
-            {
-                MainWindow window = new MainWindow();
-                this.Close();
-                window.Show();
-            }
+            MainWindow window = new MainWindow();
+            this.Close();
+            window.Show();
         }
     }
 
